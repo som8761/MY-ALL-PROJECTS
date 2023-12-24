@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>checkout</title>
+  </head>
+  <body>
+    <style>
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        background-color: lightblue;
+      }
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+      }
+      #myForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 500px;
+        margin: auto;
+      }
+      #myForm input {
+        margin-bottom: 11px;
+        width: 80%;
+        height: 22px;
+        border-radius: 8px;
+        font-size: 17px;
+      }
+      button#place_order {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 12px;
+        width: 33%;
+        height: 2rem;
+        cursor: pointer;
+        font-size: 17px;
+        font-weight: bold;
+        background-color: rgb(49, 163, 201);
+        color: white;
+      }
+      button#place_order:hover {
+        background-color: #45a049;
+      }
+
+      .error {
+        color: red;
+        font-size: 18px;
+        display: none;
+        margin-top: -9px;
+        margin-bottom: 4px;
+      }
+    </style>
+    <h1>checkout</h1>
+    <form id="myForm">
+      <input type="text" id="name" placeholder="Enter Your Name" required />
+      <p class="error" id="nameText"></p>
+
+      <input type="text" id="city" placeholder="Enter Your City" required />
+      <p class="error" id="cityText"></p>
+
+      <input
+        type="number"
+        id="number"
+        placeholder="Enter Your Number"
+        required
+      />
+      <p class="error" id="phoneText"></p>
+
+      <input
+        type="email"
+        id="email"
+        placeholder="Enter Your Email Address"
+        required
+      />
+      <p class="error" id="emailText"></p>
+
+      <input
+        type="text"
+        id="shippingAddress"
+        placeholder="Enter Your shipping Address"
+        required
+      />
+      <p class="error" id="shippingAddress"></p>
+      <button id="place_order">Place Order</button>
+    </form>
+
+    <script>
+      const place_order = document.getElementById("place_order");
+
+      const name = document.getElementById("name");
+      const city = document.getElementById("city");
+      const number = document.getElementById("number");
+      const email = document.getElementById("email");
+      const shippingAddress = document.getElementById("shippingAddress");
+
+      // refferences all the texts below the inout tags.
+      const nameText = document.getElementById("nameText");
+      const cityText = document.getElementById("cityText");
+      const phoneText = document.getElementById("phoneText");
+      const emailText = document.getElementById("emailText");
+      const confirmPasswordText = document.getElementById("shippingAddress");
+
+      place_order.addEventListener("click", function (event){
+        event.preventDefault();
+        customer_details()
+      });
+
+      function customer_details() {
+        if (
+          name.value &&
+          city.value &&
+          number.value &&
+          email.value &&
+          shippingAddress.value
+        ) {
+          alert("your order has been placed succesfully!");
+          window.location.href = "index.html";
+        } else {elseFunc()}
+      }
+
+      function elseFunc(){
+        // alert('please fill out this all fields')
+        if (name.value === "") {
+            nameText.textContent = "write something in field";
+            nameText.style.display = "block";
+          } else {
+            nameText.textContent = "";
+          }
+          //   for city
+          if (city.value === "") {
+            cityText.textContent = "write something in field";
+            cityText.style.display = "block";
+          } else {
+            cityText.textContent = "";
+          }
+        //   for number
+          if (number.value === "") {
+            phoneText.textContent = "write something in field";
+            phoneText.style.display = "block";
+          } else {
+            phoneText.textContent = "";
+          }
+        //   for email
+          if (email.value === "") {
+            emailText.textContent = "write something in field";
+            emailText.style.display = "block";
+          } else {
+            emailText.textContent = "";
+          }
+        //   for shipping address
+          if (shippingAddress.value === "") {
+            confirmPasswordText.textContent = "write something in field";
+            confirmPasswordText.style.display = "block";
+          } else {
+            confirmPasswordText.textContent = "";
+          }
+      }
+    </script>
+  </body>
+</html>
