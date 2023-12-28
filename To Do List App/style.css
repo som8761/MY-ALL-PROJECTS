@@ -1,0 +1,74 @@
+#container {
+    width: 500px;
+    border: solid 1px black;
+    margin: 0 auto;
+   
+  }
+
+  h1 {
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+  }
+  #inputField {
+    padding: 4px 7px;
+  }
+  #toDoList {
+    width: 80%;
+    /* border: solid 1px red; */
+    margin: 0 auto;
+  }
+
+  #todoItems {
+    width: 300px;
+    min-height: 100px;
+    border: solid 1px black;
+  }
+
+  .linethrough {
+    text-decoration: line-through;
+  }
+
+  /* liStyle */
+  .liStyle{
+    list-style: n;
+    font-size: 19px;
+    /* border: solid 1px black; */
+    margin: auto;
+    margin-bottom: 1rem;
+    /* display: flex; */
+    /* justify-content: space-between; */
+  }
+  .lineThrough{
+    text-decoration: line-through;
+  }
+
+  /* markStyle */
+  .markStyle{
+    /* border: solid 1px red; */
+    border-radius: 12px;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+
+  }
+  .dltStyle{
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  #darkLightMode .fa-sharp{
+    font-size: 33px;
+    cursor: pointer;
+  } 
+
+
+  .background{
+    background-color: black;
+    color: #fff;
+  }
+
+  .showHideTodoContainer{
+    display: none;
+  }
