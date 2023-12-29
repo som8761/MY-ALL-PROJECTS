@@ -114,6 +114,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+searchBtn.addEventListener('click', () => {
+    findProduct(todoItems,search.value)
+});
+
+function findProduct(items,searchValue){
+    const foundItem = Array.from(items.children).find((item)=>{
+        return item.innerHTML.toLowerCase().includes(searchValue.toLowerCase());
+    })
+    // console.log(foundItem);
+    todoItems.innerHTML = foundItem.innerHTML;
+}
+
 
 /*
 summery :
