@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+    <main>
+        <h1>Note Taker</h1>
+        <h3 id="h3">Add A New Note:</h3>
+
+        <label for="Note">Note:</label>
+        <input type="text" id="noteField" placeholder="Write your Note Here">
+
+        <button id="noteButton">Add Note</button>
+        <button class="clear_all">Clear All</button>
+        <span class="totalNotes">Total 0 notes are available</span>
+        <div id="noteList">
+            <!-- notes will be updated here automatically. -->
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
