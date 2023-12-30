@@ -1,74 +1,94 @@
 #container {
-    width: 500px;
-    border: solid 1px black;
-    margin: 0 auto;
-   
-  }
+  width: 500px;
+  margin: 0 auto;
+  border: 2px solid #333;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
 
-  h1 {
-    text-align: center;
-  }
-  h2 {
-    text-align: center;
-  }
-  #inputField {
-    padding: 4px 7px;
-  }
-  #toDoList {
-    width: 80%;
-    /* border: solid 1px red; */
-    margin: 0 auto;
-  }
+h1, h2 {
+  text-align: center;
+  /* color: #333; */
+}
 
-  #todoItems {
-    width: 300px;
-    min-height: 100px;
-    border: solid 1px black;
-  }
+#inputField {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-  .linethrough {
-    text-decoration: line-through;
-  }
+#toDoList {
+  width: 80%;
+  margin: 0 auto;
+}
 
-  /* liStyle */
-  .liStyle{
-    list-style: n;
-    font-size: 19px;
-    /* border: solid 1px black; */
-    margin: auto;
-    margin-bottom: 1rem;
-    /* display: flex; */
-    /* justify-content: space-between; */
-  }
-  .lineThrough{
-    text-decoration: line-through;
-  }
+#todoItems {
+  width: 100%;
+  min-height: 100px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
 
-  /* markStyle */
-  .markStyle{
-    /* border: solid 1px red; */
-    border-radius: 12px;
-    margin-right: 1rem;
-    margin-left: 1rem;
-    cursor: pointer;
+.liStyle {
+  list-style: none;
+  font-size: 18px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+overflow-x: auto;}
 
-  }
-  .dltStyle{
-    border-radius: 12px;
-    cursor: pointer;
-  }
+.lineThrough {
+  text-decoration: line-through;
+}
 
-  #darkLightMode .fa-sharp{
-    font-size: 33px;
-    cursor: pointer;
-  } 
+.markStyle, .dltStyle {
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+.markStyle {
+  background-color: #4caf50;
+  color: #fff;
+  margin-right: 10px;
+}
 
-  .background{
-    background-color: black;
-    color: #fff;
-  }
+.dltStyle {
+  background-color: #f44336;
+  color: #fff;
+}
 
-  .showHideTodoContainer{
-    display: none;
-  }
+#darkLightMode .fa-sharp {
+  font-size: 33px;
+  cursor: pointer;
+  /* color: #fff; */
+  transition: color 0.3s ease;
+}
+
+.background {
+  background-color: #333;
+  color: #fff;
+}
+
+.showHideTodoContainer {
+  display: none;
+}
+
+.showHideTodoContainer #todoItems {
+  display: none;
+}
