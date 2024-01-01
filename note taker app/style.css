@@ -30,7 +30,6 @@ input{
     height: 1.8em;
     padding: 0.5em;
     border: solid 1px #478959; /* Adjusted color for better contrast */
-
 }
 #noteButton{
     margin-top: 2em;
@@ -86,7 +85,7 @@ button:hover {
     text-overflow: ellipsis; /* Display an ellipsis (...) to indicate truncated text */
 }
 
-.noteCard h3{
+.noteCard h2{
     color: blue;
 }
 
@@ -106,7 +105,7 @@ button:hover {
 
 }
 .divInsideTheCard h3{
-    color: #fff; /* Adjusted color for better contrast */
+    color: #fff; 
 }
 .crossBtn{
     cursor: pointer;
@@ -120,4 +119,10 @@ button:hover {
     color: black;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Added a subtle box shadow */
     transition: color 0.3s ease, box-shadow 0.3s ease;
+}
+#filter_input{
+    width: 7rem;
+    height: 1rem;
+    border-radius: 3rem;
+    margin-left: 3rem;
 }
