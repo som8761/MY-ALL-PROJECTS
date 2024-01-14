@@ -228,7 +228,7 @@ document.getElementById('next').addEventListener('click',()=>{
 function updateMasterPlayTime() {
   const currentTime = formatTime(audioElement.currentTime);
   const duration = formatTime(audioElement.duration);
-  // masterSongName.innerHTML = `${currentTime} / ${duration} ${songs[songIndex].songName}`;
+  masterSongName.innerHTML = `${currentTime} / ${duration} ${songs[songIndex].songName}`;
 }
 
 function formatTime(seconds) {
